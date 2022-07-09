@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+
+body {
+    position: relative;
+    display:flex;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    height: 1024px;
+    background: radial-gradient(44.29% 44.29% at 50% 50%, rgba(222, 201, 14, 0.813) 5.21%, #2A1F2D 97.4%);
+}
+
+h1 {
+    position: absolute;
+    width: 718px;
+    height: 80px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 91px;
+    text-align: center;
+    text-shadow: 4px 4px 4px black;
+    color: white;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.header-back{
+
+    -webkit-text-fill-color: #12130F;
+    -webkit-text-stroke-width: 15px;
+    -webkit-text-stroke-color: #ccab03ce;
+
+    z-index: 1;
+    display:flex;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.header{
+    /* box-sizing: border-box;
+    width: 819px;
+    height: 160px;
+    background: radial-gradient(77.49% 61.67% at 50% 38.33%, #C6C49C 18.75%, #FFFFFB 22.25%, rgba(109, 106, 31, 0.74) 62.88%, rgba(123, 119, 40, 0.62) 80.73%, #858130 100%);
+    border: 5px solid #12130F;
+    border-radius: 20px; */
+    display:flex;
+    justify-content:center;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+#crystal-ball{
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: 530px;
+    /* left: 475px; */
+    top: 200px;
+    background-image: url(https://cdn.pixabay.com/photo/2019/03/09/08/28/crystal-ball-4043805_1280.jpg);
+    background-size: 200%;
+    background-position: center;
+    border-radius: 100%;
+    height: 550px;
+    width: 550px;
+    margin: 0;
+    border: 10px solid rgba(255, 248, 248, 0.26);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.74);
+    -webkit-animation: spin 60s infinite linear;
+}
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+#base{    
+    position: absolute;
+    display:block;
+    width: 573px;
+    height: 200px;
+    /* left: 475px; */
+    top: 720px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 251, 0.92186) 0%, rgba(140, 139, 121, 0.9337) 2.6%, #4B4B3C 17.19%, rgba(29, 28, 7, 0.79) 51.56%, rgba(0, 0, 0, 0.341136) 82.81%, rgba(133, 129, 48, 0) 100%, rgba(38, 37, 17, 0) 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#get{
+    position: absolute;
+    width: 400px;
+    height: 90px;
+    left: 60px;
+    top: 905px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 5px solid white;
+    border-radius: 20px;
+
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    color: white;
+
+    /* -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black; */
+
+}
+#reset{
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    left: 620px;
+    top: 905px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    color: white;
+
+    /* -webkit-text-fill-color: #12130F;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #12130F; */
+}
+#ask{
+    position: absolute;
+    width: 400px;
+    height: 90px;
+    left: 985px;
+    top: 905px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    color: white;
+
+    /* -webkit-text-fill-color: #12130F;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #12130F; */
+}
+#message{
+    position: absolute;
+    display: block;
+    width: 450px;
+    height: 530px;
+    /* left: 540px; */
+    top: 375px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    color: white;
+}
+#question{
+    position:absolute;
+    display: block;
+    width: 450px;
+    height: 530px;
+    left: 500px;
+    top: 375px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    color: black;
+}
+
+#submitBtn2{
+    position:absolute;
+    bottom: 230px;
+    width: 100px;
+    height: 70px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 5px solid white;
+    border-radius: 10px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: px;
+    -webkit-text-stroke-color: black; */
+
+}
+
+#newInputBox{
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 100px;
+    left: 500px;
+    bottom: 100px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #2A1F2D;
+    border: solid white;
+}
