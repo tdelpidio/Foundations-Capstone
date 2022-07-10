@@ -1,5 +1,18 @@
 
 module.exports = {
+    enter: (req, res) => {
+        if(!err) {
+        const {email} = req.body
+        let newUser = {}
+        newUser.email = email
+        database.push(newUser)
+        res.status(200).send({success: true})
+    } else {
+        console.log('Error setting up new user')
+        res.status(400).send({success: false})
+    }
+    },
+
     getFortune: (req, res) => {
         for(i = 0; i = fortunes.length; i++)
         res.status(200).send(fortunes[Math.floor(Math.random()*fortunes.length)])
@@ -10,7 +23,14 @@ module.exports = {
     }
 };
 
-
+const database = [
+    {
+        email: 'abc123@gmail.com'
+    },
+    {
+        email: 'johnsmith@yahoo.com'
+    },
+]
 
 const fortunes = [
     'You will soon find love.',
