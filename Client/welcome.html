@@ -17,13 +17,13 @@
     <div class="middle">
     <p>The crystal ball knows all. Enter your email below to find what your future holds.</p>
 
-<form id="entryInput" action="./main.html">
+<form id="entryInput" action="/enter" method="post">
     <input type="email" id="email" placeholder="Email" required/>
-    <button id="enterBtn">Enter</button></a>
+    <input type="submit" id="enterBtn" value="submit"></input>
 </form>    
     </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script src="welcome.js"></script>
+    <script src="./welcome.js"></script>
 </body>
 </html>

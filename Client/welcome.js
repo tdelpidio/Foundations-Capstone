@@ -1,4 +1,4 @@
-const enterBtn = document.getElementById('enter');
+const enterBtn = document.getElementById('enterBtn');
 const emailInput = document.getElementById('email');
 const baseURL = `http://localhost:4000`
 
@@ -14,13 +14,14 @@ let userEnter = (body) => {
 }
 
 function submitEmail (event) {
+    console.log('we here?')
     event.preventDefault()
     let body = {
         email: emailInput.value
     }
 
     emailInput.value = ""
-
+console.log('submit error')
     userEnter(body)
 }
 

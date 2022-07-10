@@ -1,16 +1,40 @@
+require('dotenv').config()
+const Sequelize = require('sequelize')
+
+const {CONNECTION_STRING} = process.env
+
+const sequelize = new Sequelize(CONNECTION_STRING, {
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorize: false
+        }
+    }
+})
+
+const fs = require('fs');
 
 module.exports = {
     enter: (req, res) => {
-        if(!err) {
         const {email} = req.body
-        let newUser = {}
-        newUser.email = email
-        database.push(newUser)
-        res.status(200).send({success: true})
-    } else {
-        console.log('Error setting up new user')
-        res.status(400).send({success: false})
-    }
+        console.log(req.body)
+        // let newUser = {email}
+        // // newUser.email = email
+        // users.push(newUser)
+        sequelize.query(`INSERT INTO users (email) VALUE (${email})`)
+        .then(dbRes => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch(err => console.log(err))
+
+        // fs.writeFile('./db.json', users.join(""), err => {
+        //     if (err) {
+        //         console.log(err)
+        //     }
+        // })
+        // console.log(users)
+        // res.status(200).send(users)
+    
     },
 
     getFortune: (req, res) => {
@@ -23,11 +47,6 @@ module.exports = {
     }
 };
 
-const database = [
-    {
-        email: 'abc123@gmail.com'
-    },
-]
 
 const fortunes = [
     'You will soon find love.',
