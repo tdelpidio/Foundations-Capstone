@@ -66,12 +66,49 @@ h1 {
 
 }
 
+#email{
+    width: 300px;
+    height: 30px;
+    left: 500px;
+    top: 375px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    text-align: center;
+    color: black;
+}
+
+#enterBtn{
+    bottom: 230px;
+    width: 100px;
+    height: 40px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 5px solid white;
+    border-radius: 10px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 3px black;
+}
+
+#enterBtn:hover{
+    border:5px solid #2A1F2D;
+    color:#2A1F2D;
+}
+
 #crystal-ball{
     position: absolute;
     display: block;
     width: 600px;
     height: 530px;
-    /* left: 475px; */
     top: 200px;
     background-image: url(https://cdn.pixabay.com/photo/2019/03/09/08/28/crystal-ball-4043805_1280.jpg);
     background-size: 200%;
@@ -93,13 +130,11 @@ h1 {
     display:block;
     width: 573px;
     height: 200px;
-    /* left: 475px; */
     top: 720px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 251, 0.92186) 0%, rgba(140, 139, 121, 0.9337) 2.6%, #4B4B3C 17.19%, rgba(29, 28, 7, 0.79) 51.56%, rgba(0, 0, 0, 0.341136) 82.81%, rgba(133, 129, 48, 0) 100%, rgba(38, 37, 17, 0) 100%);
     margin-left: auto;
     margin-right: auto;
 }
-
 
 #get{
     position: absolute;
@@ -118,12 +153,12 @@ h1 {
     font-size: 40px;
     line-height: 57px;
     color: white;
-
-    /* -webkit-text-fill-color: black;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
-
 }
+#get:hover{
+    border:5px solid #2A1F2D;
+    color:#2A1F2D;
+}
+
 #reset{
     position: absolute;
     width: 200px;
@@ -143,11 +178,12 @@ h1 {
     font-size: 40px;
     line-height: 57px;
     color: white;
-
-    /* -webkit-text-fill-color: #12130F;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #12130F; */
 }
+#reset:hover{
+    border:5px solid #2A1F2D;
+    color:#2A1F2D;
+}
+
 #ask{
     position: absolute;
     width: 400px;
@@ -167,17 +203,18 @@ h1 {
     font-size: 40px;
     line-height: 57px;
     color: white;
-
-    /* -webkit-text-fill-color: #12130F;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #12130F; */
 }
+
+#ask:hover{
+    border:5px solid #2A1F2D;
+    color:#2A1F2D;
+}
+
 #message{
     position: absolute;
     display: block;
     width: 450px;
     height: 530px;
-    /* left: 540px; */
     top: 375px;
     font-family: 'Paprika';
     font-style: normal;
@@ -219,11 +256,11 @@ h1 {
     color: white;
     margin-left: auto;
     margin-right: auto;
+}
 
-    /* -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: px;
-    -webkit-text-stroke-color: black; */
-
+#submitBtn2:hover{
+    border:5px solid #2A1F2D;
+    color:#2A1F2D;
 }
 
 #newInputBox{

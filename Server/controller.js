@@ -27,9 +27,6 @@ const database = [
     {
         email: 'abc123@gmail.com'
     },
-    {
-        email: 'johnsmith@yahoo.com'
-    },
 ]
 
 const fortunes = [
