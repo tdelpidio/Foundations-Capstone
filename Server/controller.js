@@ -18,23 +18,11 @@ module.exports = {
     enter: (req, res) => {
         const {email} = req.body
         console.log(req.body)
-        // let newUser = {email}
-        // // newUser.email = email
-        // users.push(newUser)
         sequelize.query(`INSERT INTO users (email) VALUE (${email})`)
         .then(dbRes => {
             res.status(200).send(dbRes[0])
         })
         .catch(err => console.log(err))
-
-        // fs.writeFile('./db.json', users.join(""), err => {
-        //     if (err) {
-        //         console.log(err)
-        //     }
-        // })
-        // console.log(users)
-        // res.status(200).send(users)
-    
     },
 
     getFortune: (req, res) => {

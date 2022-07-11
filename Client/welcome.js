@@ -1,12 +1,12 @@
-const enterBtn = document.getElementById('enterBtn');
+const enterBtn = document.getElementById('entryInput');
 const emailInput = document.getElementById('email');
-const baseURL = `http://localhost:4000`
+const baseURL = `http://localhost:5432/enter`
 
-let userEnter = (body) => {
-    axios.post("http://localhost:4000/enter", body)
-    .then(res=> {
+const userEnter = (body) => {
+    axios.post(baseURL, body)
+    .then(res => {
         if (res.data.success) {
-            console.log('New user added')
+            console.log('hello')
         } else {
             console.log('Error with new user')
         }
@@ -14,14 +14,13 @@ let userEnter = (body) => {
 }
 
 function submitEmail (event) {
-    console.log('we here?')
     event.preventDefault()
+
     let body = {
         email: emailInput.value
     }
 
     emailInput.value = ""
-console.log('submit error')
     userEnter(body)
 }
 

@@ -6,11 +6,11 @@ const messageDiv = document.querySelector('#message');
 const questionDiv = document.querySelector('#question');
 const submitDiv = document.querySelector('#submitBtn');
 
-const baseURL = `http://localhost:4000`
+const baseURL = `http://localhost:5432`
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('http://localhost:4000/getFortune').then(res => {
+    axios.get('http://localhost:5432/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
@@ -31,7 +31,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('http://localhost:4000/getAnswer').then(res => {
+        axios.get('http://localhost:5432/getAnswer').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)
