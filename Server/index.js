@@ -3,14 +3,19 @@ const express = require('express');
 const cors = require('cors');
 const {SERVER_PORT} = process.env;
 
+const app = express()
+
+app.use(express.json())
+app.use(cors())
+
 
 app.get('/', (reg,res) => {
     res.sendFile(path.join(__dirname, '../welcome.html'))
 })
 
-// app.get('/', (reg,res) => {
-//     res.sendFile(path.join(__dirname, '../main.html'))
-// })
+app.get('/', (reg,res) => {
+    res.sendFile(path.join(__dirname, '../main.html'))
+})
 
 app.get('/css', (reg,res) => {
     res.sendFile(path.join(__dirname, '../style.css'))
@@ -23,11 +28,6 @@ app.get('/welcomejs', (reg,res) => {
 app.get('/mainjs', (reg,res) => {
     res.sendFile(path.join(__dirname, '../main.js'))
 })
-
-const app = express()
-
-app.use(express.json())
-app.use(cors())
 
 const {seed} = require('./seed')
 const {enter, getFortune, getAnswer} = require('./controller')
