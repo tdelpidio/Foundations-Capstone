@@ -26,9 +26,9 @@ app.get('/welcomejs', (reg,res) => {
     res.sendFile(path.join(__dirname, '../client/welcome.js'))
 })
 
-app.get('/mainjs', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../client/main.js'))
-})
+// app.get('/mainjs', (reg,res) => {
+//     res.sendFile(path.join(__dirname, '../client/main.js'))
+// })
 
 const {seed} = require('./seed')
 const {enter, getFortune, getAnswer} = require('./controller')
