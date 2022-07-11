@@ -12,8 +12,6 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 })
 
-const fs = require('fs');
-
 module.exports = {
     enter: (req, res) => {
         const {email} = req.body
