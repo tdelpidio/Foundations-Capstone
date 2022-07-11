@@ -14,9 +14,9 @@ app.get('/', (reg,res) => {
     res.sendFile(path.join(__dirname, '../welcome.html'))
 })
 
-app.get('/', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../main.html'))
-})
+// app.get('/', (reg,res) => {
+//     res.sendFile(path.join(__dirname, '../main.html'))
+// })
 
 app.get('/css', (reg,res) => {
     res.sendFile(path.join(__dirname, '../style.css'))
