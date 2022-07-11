@@ -6,7 +6,7 @@ const {SERVER_PORT} = process.env || 5432;
 
 const app = express()
 
-app.use(express.json())
+// app.use(express.json())
 app.use(cors())
 
 
