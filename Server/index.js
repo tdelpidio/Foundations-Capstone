@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express()
+const app = express();
 const path = require('path');
 const cors = require('cors');
 
@@ -15,7 +15,7 @@ app.get('/', (reg,res) => {
 })
 
 app.get('/', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../main.html'))
+    res.sendFile(path.join(__dirname, '../client/main.html'))
 })
 
 app.get('/css', (reg,res) => {
@@ -30,14 +30,17 @@ app.get('/mainjs', (reg,res) => {
     res.sendFile(path.join(__dirname, '../client/main.js'))
 })
 
+
 const {seed} = require('./seed')
-const {enter, getFortune, getAnswer} = require('./controller')
 
 app.post('/seed', seed)
+
+const {enter, getFortune, getAnswer} = require('./controller')
 
 app.get('/getFortune', getFortune)
 app.get('/getAnswer', getAnswer)
 app.post('/enter', enter)
+
 
 app.listen(SERVER_PORT, () => {
     console.log(`running on ${SERVER_PORT}`)

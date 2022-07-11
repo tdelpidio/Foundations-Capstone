@@ -14,9 +14,9 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     enter: (req, res) => {
-        const {email} = req.body
+        const {name, email} = req.body
         console.log(req.body)
-        sequelize.query(`INSERT INTO users (email) VALUE (${email})`)
+        sequelize.query(`INSERT INTO users (name, email) VALUE (${name}, ${email})`)
         .then(dbRes => {
             res.status(200).send(dbRes[0])
         })
