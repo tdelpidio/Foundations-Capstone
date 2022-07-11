@@ -3,7 +3,7 @@ const emailInput = document.getElementById('email');
 const baseURL = `http://localhost:5432/enter`
 
 const userEnter = (body) => {
-    axios.post(baseURL, body)
+    axios.post('/enter', body)
     .then(res => {
         if (res.data.success) {
             console.log('hello')
