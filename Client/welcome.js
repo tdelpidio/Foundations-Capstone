@@ -12,5 +12,5 @@ form.addEventListener('submit', (e) => {
         .then(() => {
             console.log('new user added')
         })
-        .catch(err => console.log('new user error', err))
+        .catch(err => console.log('error adding new user', err))
 })
