@@ -12,7 +12,7 @@ const enterURL = `http://localhost:4000`
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('https://td-capstone.herokuapp.com/main.html/getFortune').then(res => {
+    axios.get('/api/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
