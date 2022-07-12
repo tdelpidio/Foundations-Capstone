@@ -65,24 +65,24 @@ const fortunes = [
     "You will soon be surrounded by good friends and laughter.",
     "You will take a chance on something in the near future.",
     "Your hard work will payoff today.",
-    "Now is the time to try something new"
+    "Now is the time to try something new."
 ]
 
 const answers = [
-    "It is certain",
-    "Without a doubt",
-    "Yes",
-    "Definitely",
-    "Most likely",
-    "I'm seeing yes",
-    "Ask again later",
-    "You don't want to know",
+    "It is certain.",
+    "Without a doubt.",
+    "Yes.",
+    "Definitely.",
+    "Most likely.",
+    "I'm seeing yes.",
+    "Ask again later.",
+    "You don't want to know.",
     "Hm, not sure. Ask again later.",
     "I don't think I should answer.",
     "Unable to predict that right now.",
-    "Wait, what? Ask again",
-    "No",
-    "Doubtful",
+    "Wait, what? Ask again.",
+    "No.",
+    "Doubtful.",
     "Don't count on it.",
     "I'm seeing no",
     "Not looking good."
