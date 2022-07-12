@@ -1,4 +1,4 @@
-const axios = require('axios')
+
 const fortuneBtn = document.getElementById("get");
 const resetBtn = document.getElementById("reset");
 const askBtn = document.getElementById("ask");
