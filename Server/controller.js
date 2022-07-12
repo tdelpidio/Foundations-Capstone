@@ -16,10 +16,11 @@ module.exports = {
         const {name, email} = req.body
         sequelize.query(
             `INSERT INTO users (name, email)
-            VALUES (${name}, ${email});`
+            VALUES (${name}, ${email})
+            RETURNING *;`
             )
             .then(dbRes => {
-                res.status(200).send({success: true})
+                res.status(200).send(dbRes[0])
             }).catch(err => console.log(err))
         // const {name, email} = req.body
         // let newUserEntry = {}
