@@ -1,33 +1,16 @@
 const enterBtn = document.getElementById('entryInput');
 const emailInput = document.getElementById('email');
 const nameInput = document.getElementById('name')
+const baseURL = `https://td-capstone.herokuapp.com`
 
 
-const userEnter = (body) => {
-    axios.post('https://td-capstone.herokuapp.com/enter', body)
-    .then(res => {
-        if (res.data.success){
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    axios.post(baseURL + '/enter', {name: nameInput.value, email: emailInput.value})
+        .then(() => {
             console.log('new user added')
-        } else {
-            console.log('Error with new user')
-        }
-    })
-}
-
-function submitHandler(event) {
-    event.preventDefault()
-
-    let body = {
-        name: nameInput.value,
-        email: emailInput.value
-    }
-
-    nameInput.value = ""
-    emailInput.value = ""
-
-    userEnter(body)
-}
-
-enterBtn.addEventListener('submit', submitHandler)
-
-
+        })
+        .catch(err => console.log('new user error', err))
+})
