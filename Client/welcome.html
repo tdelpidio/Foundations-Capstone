@@ -18,7 +18,7 @@
     <div class="middle">
     <p>The crystal ball knows all. Enter your Name and Email below to see what your future holds.</p>
 
-<form id="entryInput" onsubmit="goFortune()">
+<form id="entryInput">
     <input type="name" id="name" placeholder="Name" required/>
     <br>
     <input type="email" id="email" placeholder="Email" required/>
@@ -30,10 +30,6 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/welcomejs"></script>
-    <script>
-        function goFortune() {
-            window.location.href="./main.html?r=true"
-        }
-    </script>
+
 </body>
 </html>

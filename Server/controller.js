@@ -16,7 +16,7 @@ module.exports = {
         const {name, email} = req.body
         sequelize.query(
             `INSERT INTO users (name, email)
-            VALUES (${name}, ${email})`
+            VALUES ('${name}', '${email}')`
             )
             .then(dbRes => {
                 res.status(200).send(dbRes[0])
