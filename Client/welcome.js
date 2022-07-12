@@ -1,15 +1,10 @@
-const Sequelize = require('sequelize')
-require('dotenv').config()
-const {CONNECTION_STRING} = process.env
-
-
 const enterBtn = document.getElementById('entryInput');
 const emailInput = document.getElementById('email');
 const nameInput = document.getElementById('name')
 
 
 const userEnter = (body) => {
-    axios.post('https://td-capstone.herokuapp.com/enter', body)
+    axios.post('/enter', body)
     .then(res => {
         if (res.data.success){
             console.log('new user added')
