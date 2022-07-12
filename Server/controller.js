@@ -13,15 +13,6 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     enter: (req, res) => {
-        // const {name, email} = req.body
-        // sequelize.query(
-        //     `INSERT INTO users (name, email)
-        //     VALUES (${name}, ${email})
-        //     RETURNING *;`
-        //     )
-        //     .then(dbRes => {
-        //         res.status(200).send(dbRes[0])
-        //     }).catch(err => console.log(err))
         const {name, email} = req.body
         let newUserEntry = {}
         newUserEntry.name = name
