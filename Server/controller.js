@@ -10,6 +10,7 @@ module.exports = {
     },
 
     getFortune: (req, res) => {
+        console.log('server get fortune hit')
         for(i = 0; i = fortunes.length; i++)
         res.status(200).send(fortunes[Math.floor(Math.random()*fortunes.length)])
     },
