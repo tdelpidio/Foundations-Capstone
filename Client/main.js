@@ -33,7 +33,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('API/getAnswer').then(res => {
+        axios.get('/main').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)
