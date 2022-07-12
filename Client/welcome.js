@@ -1,4 +1,6 @@
 const Sequelize = require('sequelize')
+require('dotenv').config()
+const {CONNECTION_STRING} = process.env
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres', 
@@ -52,8 +54,13 @@ emailInput.value = ""
 enterBtn.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    let name = nameInput.value
-    let email = emailInput.value
+    let body = {
+        name: nameInput.value,
+        email: emailInput.value
+    }
+    
+    nameInput.value = ""
+    emailInput.value = ""
 
     axios.post('https://td-capstone.herokuapp.com/enter', body)
     .then(() => {
