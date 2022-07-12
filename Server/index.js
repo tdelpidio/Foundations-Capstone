@@ -1,39 +1,24 @@
-const express = require('express');
+const express = require('express')
+const path = require('path')
 const app = express();
-const path = require('path');
 const cors = require('cors');
 
-require('dotenv').config()
-const {SERVER_PORT} = process.env || 5432;
 
 app.use(express.json())
 app.use(cors())
 
-
-app.get('/', (reg,res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/welcome.html'))
 })
 
-app.get('/', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../client/main.html'))
-})
-
-app.get('/css', (reg,res) => {
+app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/style.css'))
 })
 
-app.get('/welcomejs', (reg,res) => {
+app.get('/welcome', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/welcome.js'))
 })
 
-app.get('/mainjs', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../client/main.js'))
-})
-
-
-const {seed} = require('./seed')
-
-app.post('/seed', seed)
 
 const {enter, getFortune, getAnswer} = require('./controller')
 
@@ -42,6 +27,8 @@ app.get('/getAnswer', getAnswer)
 app.post('/enter', enter)
 
 
-app.listen(SERVER_PORT, () => {
-    console.log(`running on ${SERVER_PORT}`)
+const port = process.env.PORT || 4000
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 })

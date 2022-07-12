@@ -1,26 +1,12 @@
-require('dotenv').config()
-const Sequelize = require('sequelize')
-
-const {CONNECTION_STRING} = process.env
-
-const sequelize = new Sequelize(CONNECTION_STRING, {
-    dialect: 'postgres',
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorize: false
-        }
-    }
-})
-
 module.exports = {
     enter: (req, res) => {
         const {name, email} = req.body
-        console.log(req.body)
-        sequelize.query(`INSERT INTO users (name, email) VALUE (${name}, ${email})`)
-        .then(dbRes => {
-            res.status(200).send(dbRes[0])
-        })
-        .catch(err => console.log(err))
+        let newUserEntry = {}
+        newUserEntry.name = name
+        newUserEntry.email = email
+        console.log('New user added')
+        userDatabase.push(newUserEntry)
+        res.status(200).send({success: true})
     },
 
     getFortune: (req, res) => {
@@ -33,6 +19,16 @@ module.exports = {
     }
 };
 
+const userDatabase = [
+    {
+        name: 'John',
+        email: 'john@gmail.com'
+    },
+    {
+        name: 'Joe',
+        email: 'joe@yahoo.com'
+    },
+]
 
 const fortunes = [
     'You will soon find love.',
