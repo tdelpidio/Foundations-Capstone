@@ -2,15 +2,17 @@
 const fortuneBtn = document.getElementById("get");
 const resetBtn = document.getElementById("reset");
 const askBtn = document.getElementById("ask");
-const messageDiv = document.querySelector('#message');
-const questionDiv = document.querySelector('#question');
-const submitDiv = document.querySelector('#submitBtn');
+const messageDiv = document.getElementById('message');
+const questionDiv = document.getElementById('question');
+const submitDiv = document.getElementById('submitBtn');
+const greetingDiv = document.getElementById('greeting')
+const userName = document.getElementById('name')
+const enterURL = `http://localhost:4000`
 
-const baseURL = `http://localhost:5432`
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('/getFortune').then(res => {
+    axios.get('http://localhost:4000/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
@@ -31,7 +33,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('/getAnswer').then(res => {
+        axios.get('http://localhost:4000/getAnswer').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)

@@ -1,27 +1,32 @@
 const enterBtn = document.getElementById('entryInput');
 const emailInput = document.getElementById('email');
-const baseURL = `http://localhost:5432/enter`
+const nameInput = document.getElementById('name')
+
+const enterURL = `http://localhost:4000/enter`
+
 
 const userEnter = (body) => {
-    axios.post('/enter', body)
+    axios.post(enterURL, body)
     .then(res => {
         if (res.data.success) {
-            console.log('hello')
         } else {
             console.log('Error with new user')
         }
     })
 }
 
-function submitEmail (event) {
+function submitHandler(event) {
     event.preventDefault()
 
     let body = {
+        name: nameInput.value,
         email: emailInput.value
     }
 
+    nameInput.value = ""
     emailInput.value = ""
+
     userEnter(body)
 }
 
-enterBtn.addEventListener('submit', submitEmail)
+enterBtn.addEventListener('submit', submitHandler)

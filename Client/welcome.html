@@ -16,16 +16,25 @@
     </div>
     
     <div class="middle">
-    <p>The crystal ball knows all. Enter your email below to find what your future holds.</p>
+    <p>The crystal ball knows all. Enter your Name and Email below to see what your future holds.</p>
 
-<form id="entryInput" action="/enter" method="post">
+<form id="entryInput" onsubmit="goFortune()">
+    <input type="name" id="name" placeholder="Name" required/>
+    <br>
     <input type="email" id="email" placeholder="Email" required/>
+    <br>
+    <br>
     <input type="submit" id="enterBtn" value="submit"></input>
 </form>    
     </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./welcome.js"></script>
-    <script src="/welcomejs"></script>
+    <script src="/welcome"></script>
+    <script>
+        function goFortune() {
+            window.location.href="./main.html"
+        }
+    </script>
 </body>
 </html>

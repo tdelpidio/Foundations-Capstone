@@ -51,6 +51,16 @@ h1 {
 
 }
 
+#back{
+    text-align: left;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    
+}
+
 .header{
     /* box-sizing: border-box;
     width: 819px;
@@ -66,7 +76,35 @@ h1 {
 
 }
 
+#name{
+    width: 300px;
+    height: 30px;
+    left: 500px;
+    top: 375px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    text-align: center;
+    color: black;
+}
+
 #email{
+    width: 300px;
+    height: 30px;
+    left: 500px;
+    top: 375px;
+    font-family: 'Paprika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    text-align: center;
+    color: black;
+}
+
+#birthday{
     width: 300px;
     height: 30px;
     left: 500px;
