@@ -8,11 +8,12 @@ const submitDiv = document.getElementById('submitBtn');
 const greetingDiv = document.getElementById('greeting')
 const userName = document.getElementById('name')
 const enterURL = `http://localhost:4000`
+const baseURL = `https://td-capstone.herokuapp.com/main.html`
 
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('/api/getFortune').then(res => {
+    axios.get('https://td-capstone.herokuapp.com/main.html/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)

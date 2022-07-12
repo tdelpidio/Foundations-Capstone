@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 const {enter, getFortune, getAnswer} = require('./controller')
 
-app.get('/api/getFortune', getFortune)
+app.get('/getFortune', getFortune)
 app.get('/getAnswer', getAnswer)
 app.post('/enter', enter)
 
