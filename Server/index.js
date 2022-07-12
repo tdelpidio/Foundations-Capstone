@@ -7,6 +7,8 @@ const cors = require('cors');
 app.use(express.json())
 app.use(cors())
 
+app.use(express.static('Client'))
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../Client/welcome.html', '../Client/main.html'))
 })
