@@ -4,7 +4,7 @@ const nameInput = document.getElementById('name')
 
 
 const userEnter = (body) => {
-    axios.post('/enter', body)
+    axios.post('https://td-capstone.herokuapp.com/enter', body)
     .then(res => {
         if (res.data.success){
             console.log('new user added')
