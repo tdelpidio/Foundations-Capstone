@@ -1,4 +1,4 @@
-
+const axios = require('axios')
 const fortuneBtn = document.getElementById("get");
 const resetBtn = document.getElementById("reset");
 const askBtn = document.getElementById("ask");
@@ -8,10 +8,10 @@ const submitDiv = document.getElementById('submitBtn');
 const greetingDiv = document.getElementById('greeting')
 const userName = document.getElementById('name')
 const baseURL = `https://td-capstone.herokuapp.com`
-const axios = require('axios')
 
 
-n.addEventListener("click", () => {
+
+fortuneBtn.addEventListener("click", () => {
     console.log("fortune button hit")
     axios.get(baseURL + '/getFortune').then(res => {
         const messageElement = document.createElement('div')
