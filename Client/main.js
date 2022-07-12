@@ -7,8 +7,6 @@ const questionDiv = document.getElementById('question');
 const submitDiv = document.getElementById('submitBtn');
 const greetingDiv = document.getElementById('greeting')
 const userName = document.getElementById('name')
-const enterURL = `http://localhost:4000`
-const baseURL = `https://td-capstone.herokuapp.com/main.html`
 
 
 
