@@ -6,7 +6,7 @@ const enterURL = `http://localhost:4000/enter`
 
 
 const userEnter = (body) => {
-    axios.post(enterURL, body)
+    axios.post('API/enter', body)
     .then(res => {
         if (res.data.success) {
         } else {

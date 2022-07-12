@@ -12,7 +12,7 @@ const enterURL = `http://localhost:4000`
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('/getFortune').then(res => {
+    axios.get('API/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
@@ -33,7 +33,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('/getAnswer').then(res => {
+        axios.get('API/getAnswer').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)
