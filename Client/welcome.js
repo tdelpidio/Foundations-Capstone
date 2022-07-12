@@ -46,7 +46,7 @@ enterBtn.addEventListener('submit', (e) => {
     let name = nameInput.value
     let email = emailInput.value
 
-    axios.post('/enter', {name: name, email: email})
+    axios.post('https://td-capstone.herokuapp.com/enter', {name: name, email: email})
     .then(() => {
         console.log('working')
     })
