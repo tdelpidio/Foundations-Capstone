@@ -17,17 +17,17 @@ app.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../Client/main.html'))
 // })
 
-app.get('/css', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Client/style.css'))
-})
+// app.get('/css', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../Client/style.css'))
+// })
 
-app.get('/welcome', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Client/welcome.js'))
-})
+// app.get('/welcome', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../Client/welcome.js'))
+// })
 
-app.get('/main', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Client/main.js'))
-})
+// app.get('/main', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../Client/main.js'))
+// })
 
 
 const {enter, getFortune, getAnswer} = require('./controller')
