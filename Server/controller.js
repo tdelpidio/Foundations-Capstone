@@ -1,12 +1,32 @@
+require('dotenv').config()
+const {CONNECTION_STRING} = process.env
+const Sequelize = require('sequelize')
+
+const sequelize = new Sequelize(CONNECTION_STRING, {
+    dialect: 'postgres', 
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false
+        }
+    }
+})
+
 module.exports = {
     enter: (req, res) => {
-        const {name, email} = req.body
-        let newUserEntry = {}
-        newUserEntry.name = name
-        newUserEntry.email = email
-        console.log('New user added')
-        userDatabase.push(newUserEntry)
-        res.status(200).send({success: true})
+        sequelize.query(
+            `INSERT INTO users (name, email)
+            VALUES (${name}, ${email});`
+            )
+            .then(dbRes => {
+                res.status(200).send(dbRes[0])
+            }).catch(err => console.log(err))
+        // const {name, email} = req.body
+        // let newUserEntry = {}
+        // newUserEntry.name = name
+        // newUserEntry.email = email
+        // console.log('New user added')
+        // userDatabase.push(newUserEntry)
+        // res.status(200).send({success: true})
     },
 
     getFortune: (req, res) => {
