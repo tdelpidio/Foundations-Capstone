@@ -13,6 +13,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     enter: (req, res) => {
+        const {name, email} = req.body
         sequelize.query(
             `INSERT INTO users (name, email)
             VALUES (${name}, ${email});`
