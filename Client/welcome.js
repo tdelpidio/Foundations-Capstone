@@ -1,3 +1,14 @@
+const Sequelize = require('sequelize')
+
+const sequelize = new Sequelize(CONNECTION_STRING, {
+    dialect: 'postgres', 
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false
+        }
+    }
+})
+
 const enterBtn = document.getElementById('entryInput');
 const emailInput = document.getElementById('email');
 const nameInput = document.getElementById('name')
@@ -13,31 +24,31 @@ const userEnter = (body) => {
     })
 }
 
-function submitHandler(event) {
-    event.preventDefault()
+// function submitHandler(event) {
+//     event.preventDefault()
 
-    let body = {
-        name: nameInput.value,
-        email: emailInput.value
-    }
+//     let body = {
+//         name: nameInput.value,
+//         email: emailInput.value
+//     }
 
-    nameInput.value = ""
-    emailInput.value = ""
+//     nameInput.value = ""
+//     emailInput.value = ""
 
-    userEnter(body)
-}
+//     userEnter(body)
+// }
 
-enterBtn.addEventListener('submit', submitHandler)
+// enterBtn.addEventListener('submit', submitHandler)
 
-// enterBtn.addEventListener('submit', (e) => {
-//     e.preventDefault()
+enterBtn.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-//     let name = nameInput.value
-//     let email = emailInput.value
+    let name = nameInput.value
+    let email = emailInput.value
 
-//     axios.post('/enter', {name: name, email: email})
-//     .then(() => {
-//         console.log('working')
-//     })
+    axios.post('/enter', {name: name, email: email})
+    .then(() => {
+        console.log('working')
+    })
 
-// })
+})
