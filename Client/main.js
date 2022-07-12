@@ -7,11 +7,12 @@ const questionDiv = document.getElementById('question');
 const submitDiv = document.getElementById('submitBtn');
 const greetingDiv = document.getElementById('greeting')
 const userName = document.getElementById('name')
+baseURL = `https://td-capstone.herokuapp.com/main.html`
 
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('/getFortune').then(res => {
+    axios.get(baseURL + '/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
@@ -32,7 +33,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('/getAnswer').then(res => {
+        axios.get(baseURL + '/getAnswer').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)
