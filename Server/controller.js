@@ -18,7 +18,7 @@ module.exports = {
             VALUES (${name}, ${email});`
             )
             .then(dbRes => {
-                res.status(200).send(dbRes[0])
+                res.status(200).send({success: true})
             }).catch(err => console.log(err))
         // const {name, email} = req.body
         // let newUserEntry = {}
