@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
 
 const {enter, getFortune, getAnswer} = require('./controller')
 
-app.get('API/getFortune', getFortune)
-app.get('/main', getAnswer)
-app.post('API/enter', enter)
+app.get('/getFortune', getFortune)
+app.get('/getAnswer', getAnswer)
+app.post('/enter', enter)
 
 
 const port = process.env.PORT || 4000

@@ -12,7 +12,7 @@ const enterURL = `http://localhost:4000`
 
 
 fortuneBtn.addEventListener("click", () => {
-    axios.get('API/getFortune').then(res => {
+    axios.get('https://td-capstone.herokuapp.com/main.html/getFortune').then(res => {
         const messageElement = document.createElement('div')
         messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
         messageDiv.appendChild(messageElement)
@@ -33,7 +33,7 @@ askBtn.addEventListener('click', () => {
     submitDiv.appendChild(submitBtn)
     
     submitBtn.addEventListener('click', () => {
-        axios.get('/main').then(res => {
+        axios.get('/getAnswer').then(res => {
             const messageElement = document.createElement('div')
             messageElement.innerHTML = `<p class="fortune">${res.data}</p>`
             messageDiv.appendChild(messageElement)
