@@ -34,17 +34,6 @@ module.exports = {
     }
 };
 
-const userDatabase = [
-    {
-        name: 'John',
-        email: 'john@gmail.com'
-    },
-    {
-        name: 'Joe',
-        email: 'joe@yahoo.com'
-    },
-]
-
 const fortunes = [
     'You will soon find love.',
     'Someone you love will betray you.',
@@ -99,6 +88,7 @@ const answers = [
     "No.",
     "Doubtful.",
     "Don't count on it.",
-    "I'm seeing no",
-    "Not looking good."
+    "I'm seeing no.",
+    "Not looking good.",
+    "I'm thinking no."
 ]
