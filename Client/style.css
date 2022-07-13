@@ -6,6 +6,8 @@
     justify-content:center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     width: 1440px;
     height: 1024px;
     background: radial-gradient(44.29% 44.29% at 50% 50%, rgba(222, 201, 14, 0.813) 5.21%, #2A1F2D 97.4%);
